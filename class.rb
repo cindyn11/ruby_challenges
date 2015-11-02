@@ -112,19 +112,7 @@ Now it’s your turn to create your first object class!
 =end
 
 class Dog
-	def set_name=(dog_name)
-		@name = dog_name
-	end
-	def get_name
-		return @name
-	end
-	
-	def set_owner=(owner_name)
-		@owner_name = owner_name
-	end
-	def get_owner
-		return @owner_name
-	end
+	attr_accessor :name, :owner_name, :bark
 	
 	def bark
 			if @name == "Fido"
@@ -134,13 +122,13 @@ class Dog
 	end
 end
 my_dog = Dog.new
-my_dog.set_name = "George"
-dogname = my_dog.get_name
+my_dog.name = "George"
+dogname = my_dog.name
 puts "#{dogname} says #{my_dog.bark}"
 
 your_dog = Dog.new
-your_dog.set_name = "Fido"
-dogname = your_dog.get_name
+your_dog.name = "Fido"
+dogname = your_dog.name
 puts "#{dogname} says #{your_dog.bark}"
 
 end
